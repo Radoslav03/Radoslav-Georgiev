@@ -1,14 +1,21 @@
 #include <stdio.h>
 
-int c=0;
-int count (){
-return c=c+1;
+int string_copy(char *a,char *b){
+    int i;
+    for(i=0; a[i]!='\0';i++){
+        b[i]=a[i];
+    }
+return i;
 }
 
 
 int main() {
-printf("%d\n", count());
-printf("%d\n", count());
-printf("%d\n", count());
+char a[7] = "hello";
+char b[7];
+int length = string_copy(a, b);
+printf("%d %s", length, b);
+
 }
+
+
 
