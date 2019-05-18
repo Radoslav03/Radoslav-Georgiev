@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+
+int print_array(int *a,int count) {
+	for (int i = 0; i <count ; i++) {
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+}
+int reverse(int *b,int count){
+    for(int i=count-1; i>=0; i--) {
+        printf("%d ",b[i]);
+    }
+    printf("\n");
+}
+
+
+int main()
+{
+	int a[5] = {5, 17, 1, -4, 3};
+	print_array(&a, 5);
+	reverse(&a,5);
+	print_array(&a, 5);
+}
+
